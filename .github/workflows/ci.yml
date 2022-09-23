@@ -40,7 +40,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install --frozen-lockfile
-      - run: npm playwright install ${{ matrix.e2e-browser }}
+      - run: npx playwright install ${{ matrix.e2e-browser }}
       - run: npm test
       - name: Archive test results
         shell: bash
