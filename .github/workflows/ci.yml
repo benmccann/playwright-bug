@@ -44,7 +44,7 @@ jobs:
       - run: npm test
       - name: Archive test results
         shell: bash
-        run: find packages -type d -name test-results -not -empty | tar -czf test-results.tar.gz --files-from=-
+        run: find . -type d -name test-results -not -empty | tar -czf test-results.tar.gz --files-from=-
       - name: Upload test results
         uses: actions/upload-artifact@v3
         with:
