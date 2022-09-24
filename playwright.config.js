@@ -29,5 +29,5 @@ export default {
 		screenshot: 'only-on-failure',
 		trace: 'retain-on-failure'
 	},
-	workers: process.env.CI ? 2 : undefined
+	workers: 50
 }
